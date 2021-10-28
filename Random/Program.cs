@@ -11,7 +11,7 @@ namespace Random
         {
             Faker f = new Faker("ru");
             var rnd = new Randomizer();
-            string writePath = @"C:\Users\Андрей\Desktop\testData.txt"; //  заменить на ваш путь
+            string writePath = Environment.GetFolderPath(Environment.SpecialFolder.Desktop) + @"\testData.txt";
             try
             {
                 using (StreamWriter sw = new StreamWriter(writePath, false, System.Text.Encoding.Default))
